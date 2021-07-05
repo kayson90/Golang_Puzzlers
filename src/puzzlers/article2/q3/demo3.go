@@ -8,6 +8,8 @@ import (
 
 var name string
 
+//todo flag使用场景不太多，后面再回顾吧
+
 // 方式3。
 //var cmdLine = flag.NewFlagSet("question", flag.ExitOnError)
 

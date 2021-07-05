@@ -1,5 +1,6 @@
 package main
 
+//路径是从$GOPAH和$GOROOT进行搜索的
 import (
 	"flag"
 	"puzzlers/article3/q2/lib"

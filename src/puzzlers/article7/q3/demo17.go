@@ -16,6 +16,8 @@ func main() {
 		fmt.Printf("s9(%d): %v (len: %d, cap: %d)\n",
 			i, s9, len(s9), cap(s9))
 	}
+	//底层数组元素被覆盖了，数组的长度依然是没有发生任何变化的
+	//切片前面去掉的元素在数组里依然存在
 	fmt.Printf("a1: %v (len: %d, cap: %d)\n",
 		a1, len(a1), cap(a1))
 	fmt.Println()

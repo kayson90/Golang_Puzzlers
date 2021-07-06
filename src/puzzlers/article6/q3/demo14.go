@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//todo 类型转换后面再看
 func main() {
 	// 示例1。
 	{

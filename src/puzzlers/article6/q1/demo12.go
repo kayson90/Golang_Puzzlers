@@ -30,7 +30,7 @@ func main() {
 
 //这个函数比较高级
 //命名返回值
-//类型switch
+//类型switch type类型
 func getElement(containerI interface{}) (elem string, err error) {
 	switch t := containerI.(type) {
 	case []string:

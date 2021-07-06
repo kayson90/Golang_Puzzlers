@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+//todo 关于补码反码的问题，后面再仔细琢磨，先去看go语言特性
 func main() {
 	// 重点1的示例。
 	var srcInt = int16(-255)

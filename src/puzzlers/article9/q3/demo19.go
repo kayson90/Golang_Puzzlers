@@ -19,5 +19,6 @@ func main() {
 
 	elem = 2
 	fmt.Println("Add a key-element pair to a nil map...")
+	//只有add的时候会出现panic
 	m["two"] = elem // 这里会引发panic。
 }

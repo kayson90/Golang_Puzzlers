@@ -47,6 +47,7 @@ func example2() {
 	case _, ok := <-intChan:
 		if !ok {
 			fmt.Println("The candidate case is closed.")
+			//通道关闭屏蔽掉
 			break
 		}
 		fmt.Println("The candidate case is selected.")

@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+//接送操作符的使用
+//箭头方向代码数据传输的方向
 func main() {
 	ch1 := make(chan int, 3)
 	ch1 <- 2

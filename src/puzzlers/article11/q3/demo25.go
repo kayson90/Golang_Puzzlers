@@ -4,6 +4,7 @@ import "fmt"
 
 var channels = [3]chan int{
 	nil,
+	//创建一个无缓冲的通道
 	make(chan int),
 	nil,
 }
@@ -11,16 +12,20 @@ var channels = [3]chan int{
 var numbers = []int{1, 2, 3}
 
 func main() {
-	select {
-	case getChan(0) <- getNumber(0):
-		fmt.Println("The first candidate case is selected.")
-	case getChan(1) <- getNumber(1):
-		fmt.Println("The second candidate case is selected.")
-	case getChan(2) <- getNumber(2):
-		fmt.Println("The third candidate case is selected")
-	default:
-		fmt.Println("No candidate case is selected!")
-	}
+	court := make(chan int)
+	court <- 1
+	a := <-court
+	println(a)
+	//select {
+	//case getChan(0) <- getNumber(0):
+	//	fmt.Println("The first candidate case is selected.")
+	//case getChan(1) <- getNumber(1):
+	//	fmt.Println("The second candidate case is selected.")
+	//case getChan(2) <- getNumber(2):
+	//	fmt.Println("The third candidate case is selected")
+	//default:
+	//	fmt.Println("No candidate case is selected!")
+	//}
 }
 
 func getNumber(i int) int {

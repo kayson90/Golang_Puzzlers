@@ -8,6 +8,7 @@ type Pet interface {
 	Category() string
 }
 
+//鸭子类型，无侵入式的接口实现方式
 type Dog struct {
 	name string // 名字。
 }
@@ -34,6 +35,7 @@ func main() {
 	fmt.Println()
 
 	// 示例2。
+	//指针类型实现了Pet接口
 	var pet Pet = &dog
 	fmt.Printf("This pet is a %s, the name is %q.\n",
 		pet.Category(), pet.Name())

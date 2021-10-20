@@ -39,6 +39,7 @@ func main() {
 		fmt.Println("The pet is not nil.")
 	}
 	fmt.Printf("The type of pet is %T.\n", pet)
+	//反射
 	fmt.Printf("The type of pet is %s.\n", reflect.TypeOf(pet).String())
 	fmt.Printf("The type of second dog is %T.\n", dog2)
 	fmt.Println()
@@ -46,6 +47,7 @@ func main() {
 	// 示例2。
 	wrap := func(dog *Dog) Pet {
 		if dog == nil {
+			//直接复制为nil
 			return nil
 		}
 		return dog

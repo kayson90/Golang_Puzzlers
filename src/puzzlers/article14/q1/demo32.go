@@ -30,6 +30,7 @@ func main() {
 	dog := Dog{"little pig"}
 	fmt.Printf("The dog's name is %q.\n", dog.Name())
 	var pet Pet = dog
+	//指针
 	dog.SetName("monster")
 	fmt.Printf("The dog's name is %q.\n", dog.Name())
 	fmt.Printf("This pet is a %s, the name is %q.\n",

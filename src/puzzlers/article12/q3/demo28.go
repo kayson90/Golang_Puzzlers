@@ -20,6 +20,7 @@ func main() {
 	fmt.Println()
 
 	// 示例3。
+	//是slice的数组，slice的修改会变，数组修改不会变
 	complexArray1 := [3][]string{
 		[]string{"d", "e", "f"},
 		[]string{"g", "h", "i"},

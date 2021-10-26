@@ -12,6 +12,7 @@ func main() {
 	for i := 0; i < num; i++ {
 		go func() {
 			fmt.Println(i)
+			//空结构体字面量
 			sign <- struct{}{}
 		}()
 	}

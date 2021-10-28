@@ -28,6 +28,7 @@ func main() {
 	fmt.Println()
 
 	// 示例2。
+	// 这两种其实是一样的
 	err1 := fmt.Errorf("invalid contents: %s", "#$%")
 	err2 := errors.New(fmt.Sprintf("invalid contents: %s", "#$%"))
 	if err1.Error() == err2.Error() {

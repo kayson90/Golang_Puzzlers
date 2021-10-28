@@ -26,6 +26,7 @@ func main() {
 	panic(errors.New("something wrong"))
 
 	// recover函数的错误用法。
+	// 根本就不会走到recover这里来
 	p := recover()
 	fmt.Printf("panic: %s\n", p)
 

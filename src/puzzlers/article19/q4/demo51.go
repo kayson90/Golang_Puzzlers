@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//defer函数执行的顺序
 func main() {
 	defer fmt.Println("first defer")
 	for i := 0; i < 3; i++ {

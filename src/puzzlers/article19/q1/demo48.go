@@ -2,11 +2,13 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func main() {
 	fmt.Println("Enter function main.")
-	caller1()
+	go caller1()
+	time.Sleep(time.Millisecond * 1000)
 	fmt.Println("Exit function main.")
 }
 

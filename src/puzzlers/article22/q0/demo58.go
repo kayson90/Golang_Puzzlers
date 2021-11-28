@@ -16,6 +16,7 @@ import (
 var protecting uint
 
 func init() {
+	//表示保护数据写入，如果关闭数据写保护，一行数据可能会不同
 	flag.UintVar(&protecting, "protecting", 1,
 		"It indicates whether to use a mutex to protect data writing.")
 }
@@ -23,6 +24,7 @@ func init() {
 func main() {
 	flag.Parse()
 	// buffer 代表缓冲区。
+	// 这个缓冲区实际上就是共享数据，并发写入不加锁会导致错误
 	var buffer bytes.Buffer
 
 	const (
@@ -66,7 +68,7 @@ func main() {
 			}
 		}(i, &buffer)
 	}
-
+	//通道只是保证goroutine都执行完成，并没有锁的含义
 	for i := 0; i < max1; i++ {
 		<-sign
 	}

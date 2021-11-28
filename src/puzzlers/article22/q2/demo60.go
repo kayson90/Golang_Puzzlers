@@ -6,6 +6,7 @@ import (
 	"time"
 )
 
+//读锁多个goroutine都可以同时读
 // counter 代表计数器。
 type counter struct {
 	num uint         // 计数。

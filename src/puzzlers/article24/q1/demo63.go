@@ -28,6 +28,7 @@ func main() {
 	forAndCAS2()
 }
 
+// CAS实际上是一种乐观锁的实现，是CPU底层的实现
 // forAndCAS1 用于展示简易的自旋锁。
 func forAndCAS1() {
 	sign := make(chan struct{}, 2)

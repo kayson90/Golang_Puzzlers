@@ -16,6 +16,7 @@ func main() {
 		atomic.AddUint32(&counter, 1)
 	})
 	fmt.Printf("The counter: %d\n", counter)
+	//双重检查锁
 	once.Do(func() {
 		atomic.AddUint32(&counter, 2)
 	})

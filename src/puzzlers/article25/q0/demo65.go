@@ -13,6 +13,7 @@ func main() {
 	coordinateWithWaitGroup()
 }
 
+//使用通道进行同步
 func coordinateWithChan() {
 	sign := make(chan struct{}, 2)
 	num := int32(0)
@@ -24,6 +25,7 @@ func coordinateWithChan() {
 	go addNum(&num, 2, max, func() {
 		sign <- struct{}{}
 	})
+	//确实比较丑陋
 	<-sign
 	<-sign
 }
